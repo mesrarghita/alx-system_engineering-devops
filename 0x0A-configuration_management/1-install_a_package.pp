@@ -1,7 +1,10 @@
-# Use the "package" resource type to manage the installation of the Flask package
-package { 'flask':
-  # Ensure that Flask version 2.1.0 is installed
-  ensure   => '2.1.0',
-  # Use pip3 as the package provider to install the package
-  provider => 'pip3',
+# 1-install_a_package.pp
+
+package { 'python3-pip':
+  ensure => installed,
+}
+
+exec { 'install_flask':
+  command => '/usr/bin/pip3 install Flask==2.1.0',
+  unless  => '/usr/bin/pip3 show flask | grep -q "Version: 2.1.0"',
 }
