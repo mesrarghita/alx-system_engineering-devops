@@ -1,6 +1,7 @@
-#!/usr/bin/pup
-# Install an especific version of flask (2.1.0)
+# Use the "package" resource type to manage the installation of the Flask package
 package { 'flask':
-  ensure    => '2.1.0',
-  provider  => 'pip3',
-}  
+  # Ensure that Flask version 2.1.0 is installed
+  ensure   => '2.1.0',
+  # Use pip3 as the package provider to install the package
+  provider => 'pip3',
+}
