@@ -1,0 +1,4 @@
+# I contributed to the hbnb project in this repository 
+
+#AirBnB_v2 Authors
+Joshua Mwendwa <ghita1mesrar@gmail.com>
